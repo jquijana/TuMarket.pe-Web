@@ -1,0 +1,47 @@
+.slider {
+    width: 100%;
+    /*height: 100%;*/
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    overflow: hidden;
+
+}
+.slide > img{
+    max-height: 350px;
+}
+
+%btn-styles{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10%;
+    height: 80%;
+    background: none;
+    border: none;
+    outline: none;
+    transition: 0.5s;
+    &:hover {
+       background: #fbb02dbf; 
+       cursor: pointer;
+    }
+}
+
+#irIzquierda{
+    left: 0;
+    @extend %btn-styles;
+}
+
+#irDerecha{
+    right: 0;
+    @extend %btn-styles;
+}
